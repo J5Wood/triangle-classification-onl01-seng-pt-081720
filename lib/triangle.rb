@@ -1,3 +1,4 @@
+require 'pry'
 class Triangle
 
   attr_accessor :side_one, :side_two, :side_three
@@ -13,6 +14,7 @@ class Triangle
 
   def kind
     self.each do |x|
+      binding.pry
       if x.negative()?
         begin
           raise TriangleError
