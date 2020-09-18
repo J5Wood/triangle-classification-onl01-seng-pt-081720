@@ -14,7 +14,7 @@ class Triangle
 
   def kind
     binding.pry
-    if 0 in (side_one, side_two, side_three):
+    if 0 in {side_one, side_two, side_three}:
       raise TriangleError
     elsif side_one == side_two && side_two == side_three
       :equilateral
