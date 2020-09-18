@@ -13,6 +13,7 @@ class Triangle
   end
 
   def kind
+    binding.pry
     if side_one or side_two or side_three == 0
       raise TriangleError
     elsif side_one == side_two && side_two == side_three
