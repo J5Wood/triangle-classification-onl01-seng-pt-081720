@@ -17,6 +17,8 @@ class Triangle
       raise TriangleError
     elsif side_one.negative? || side_two.negative? || side_three.negative?
       raise TriangleError
+    elsif side_one + side_two <= side_three || side_two + side_three <= side_one || side_one + side_three <= side_two
+      raise TriangleError
     elsif side_one == side_two && side_two == side_three
       :equilateral
     elsif side_one == side_two || side_one == side_three || side_two == side_three
