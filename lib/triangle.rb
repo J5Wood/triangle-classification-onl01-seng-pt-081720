@@ -13,8 +13,9 @@ class Triangle
   end
 
   def kind
-
-    if side_one == side_two && side_two == side_three
+    if side_one or side_two or side_three == 0
+      raise TriangleError
+    elsif side_one == side_two && side_two == side_three
       :equilateral
     elsif side_one == side_two || side_one == side_three || side_two == side_three
       :isosceles
