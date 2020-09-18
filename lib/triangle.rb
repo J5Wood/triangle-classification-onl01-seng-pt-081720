@@ -12,7 +12,12 @@ class Triangle
   end
 
   def kind
-
+    self.each do |x|
+      if x.negative()?
+        begin
+          raise TriangleError
+        rescue TriangleError => error
+      end
     if side_one == side_two && side_two == side_three
       :equilateral
     elsif side_one == side_two || side_one == side_three || side_two == side_three
