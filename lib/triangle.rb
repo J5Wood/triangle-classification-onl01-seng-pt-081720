@@ -15,11 +15,12 @@ class Triangle
   def kind
     self.each do |x|
       binding.pry
-      if x.negative()?
-        begin
-          raise TriangleError
-        rescue TriangleError => error
-        end
+    #   if x.negative()?
+    #     begin
+    #       raise TriangleError
+    #     rescue TriangleError => error
+    #     end
+  end
       end
     end
     if side_one == side_two && side_two == side_three
