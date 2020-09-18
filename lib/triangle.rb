@@ -18,6 +18,7 @@ class Triangle
           raise TriangleError
         rescue TriangleError => error
       end
+    end
     if side_one == side_two && side_two == side_three
       :equilateral
     elsif side_one == side_two || side_one == side_three || side_two == side_three
